@@ -1,0 +1,47 @@
+<!-- <p>user-form works!</p>
+<form (ngSubmit)="saveUser()" enctype="multipart/form-data">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="userData.username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="userData.password" required>
+    </div>
+    <div>
+      <label for="birthdate">Birthdate:</label>
+      <input type="date" id="birthdate" name="birthdate" [(ngModel)]="userData.birthdate" required>
+    </div>
+    <div>
+      <label for="files">Files:</label>
+      <input type="file" id="files" name="files" multiple (change)="onFileSelected($event)" required>
+    </div>
+    <button type="submit">Save</button>
+  </form>
+  <p>{{ responseMessage }}</p>
+   -->
+   <div class="container mt-5">
+
+   <form (ngSubmit)="saveUser()" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="exampleInputEmail1">username</label>
+      <input type="email" class="form-control" placeholder="Enter email" id="username" name="username" [(ngModel)]="userData.username" required>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password"  class="form-control" id="password" name="password" [(ngModel)]="userData.password" required>
+    </div>
+    <div class="form-group">
+      <label for="birthdate">Birthdate:</label>
+      <input type="date" class="form-control" id="birthdate" name="birthdate" [(ngModel)]="userData.birthdate" required>
+    </div>
+    <div class="form-group">
+      <label for="files">Files:</label>
+      <input type="file" class="form-control" id="files" name="files" multiple (change)="onFileSelected($event)" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <p>{{ responseMessage }}</p>
+  </form>
+</div>
